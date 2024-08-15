@@ -68,3 +68,5 @@ Curie is a voice assistant application built using Python. It leverages speech r
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+
+###### Made with ❤️ by [Jeel Patel](https://github.com/iamj33l)
