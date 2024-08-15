@@ -14,13 +14,13 @@ class Curie:
         self.speech = SpeechModule()
 
     def start(self):
-        self.speech.synthesize_speech("Hello, I am Curie. How can I help you today?")
         self.speech.recognize_speech_from_mic()
 
     def execute(self, command):
 
         if "hello" in command.lower() or "hi" in command.lower():
-            self.speech.synthesize_speech("Hello, how can I help you today?")
+            response = "Hello, how can I help you today?"
+            self.speech.synthesize_speech()
 
         elif "current time" in command.lower():
             response = get_time()
@@ -55,4 +55,7 @@ class Curie:
             self.speech.synthesize_speech(response)
 
         else:
-            self.speech.synthesize_speech("Sorry, I did not understand that command.")
+            response = "Sorry, I did not understand that command."
+            self.speech.synthesize_speech(response)
+
+        return response

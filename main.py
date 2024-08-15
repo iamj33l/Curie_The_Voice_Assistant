@@ -22,7 +22,6 @@ class CurieApp:
     def activate_voice_assistant(self):
         with self.mic as source:
             self.recognizer.adjust_for_ambient_noise(source)
-            self.update_chat_history("Curie: How can I help you today?")
             audio = self.recognizer.listen(source)
 
         try:
