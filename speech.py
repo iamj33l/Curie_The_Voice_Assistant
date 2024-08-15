@@ -24,6 +24,7 @@ class SpeechModule:
 
     def synthesize_speech(self, text):
         """Synthesize speech from text."""
+        self.change_voice(1)
         self.engine.say(text)
         self.engine.runAndWait()
 

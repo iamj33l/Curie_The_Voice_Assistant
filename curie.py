@@ -22,6 +22,10 @@ class Curie:
             response = "Hello, how can I help you today?"
             self.speech.synthesize_speech()
 
+        elif "introduce" in command.lower():
+            response = "My name is Curie. I am a Voice assistant built in Python by Jeel Patel."
+            self.speech.synthesize_speech(response)
+
         elif "current time" in command.lower():
             response = get_time()
             self.speech.synthesize_speech(response)
